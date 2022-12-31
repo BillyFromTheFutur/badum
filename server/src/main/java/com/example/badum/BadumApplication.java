@@ -9,5 +9,6 @@ public class BadumApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BadumApplication.class, args);
 	}
+  
 
 }
