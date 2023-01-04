@@ -1,9 +1,10 @@
 import { Text, View } from "react-native";
 import styles from "../styles/HomeScreen"
-const HomeScreen = ()=> {
+
+const FeedScreen = ()=> {
   return <View style={styles.main}>
-    <Text> This is the Home Screen </Text>
+    <Text> This is the Feed Screen </Text>
   </View>
 }
 
-export default HomeScreen;
+export default FeedScreen;
