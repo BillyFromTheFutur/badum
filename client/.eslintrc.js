@@ -2,7 +2,10 @@ module.exports = {
   root: true,
   extends: ['@react-native-community', 'prettier'],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'prettier', 'react', 'react-native'],
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
@@ -20,3 +23,4 @@ module.exports = {
     },
   ],
 };
+//module.exports = { options };

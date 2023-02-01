@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
-import {Foundation, Feather, Ionicons} from '@expo/vector-icons';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { Foundation, Feather, Ionicons } from '@expo/vector-icons';
 
 function BottomNavigationTabBar({
   state,
@@ -23,8 +23,8 @@ function BottomNavigationTabBar({
         marginBottom: 10,
       }}>
       {state.routes.map(
-        (route: {key: string | number; name: any}, index: any) => {
-          const {options} = descriptors[route.key];
+        (route: { key: string | number; name: any }, index: any) => {
+          const { options } = descriptors[route.key];
           const label =
             options.tabBarLabel !== undefined
               ? options.tabBarLabel
@@ -44,7 +44,7 @@ function BottomNavigationTabBar({
             if (!isFocused && !event.defaultPrevented) {
               // !event.defaultPrevented
               // The `merge: true` option makes sure that the params inside the tab screen are preserved
-              navigation.navigate({name: route.name, merge: true});
+              navigation.navigate({ name: route.name, merge: true });
             }
           };
 
@@ -58,15 +58,19 @@ function BottomNavigationTabBar({
           return (
             <TouchableOpacity
               accessibilityRole="button"
-              accessibilityState={isFocused ? {selected: true} : {}}
+              accessibilityState={isFocused ? { selected: true } : {}}
               accessibilityLabel={options.tabBarAccessibilityLabel}
               testID={options.tabBarTestID}
               onPress={onPress}
               onLongPress={onLongPress}
               touchSoundDisabled={true}
-              style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+              style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
               <Feather
-                name="home"
+                name="map"
                 size={isFocused ? 24 : 22}
                 color={isFocused ? 'white' : 'grey'}
               />
